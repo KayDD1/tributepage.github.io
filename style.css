@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    display: grid;
+    max-width: 1200px;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "about main discography"
+    "tours tours awards";
+    grid-gap: 1px;
+    
+
+}
+nav{
+    grid-area: nav;
+    background-image: linear-gradient(#ffd700, #111010cc), url("https://png.pngtree.com/thumb_back/fw800/background/20191029/pngtree-blue-wall-led-light-screen-concert-with-lightbulp-background-vector-illustration-image_320590.jpg");
+    background-size: cover;
+    text-align: center;
+   padding: 5px;
+   border-radius: 5px;
+}
+main{
+    grid-area: main;
+    background-color: skyblue;
+     border-radius: 5px;
+     padding: 20px 0;
+}
+#title{
+    font-size: 50px;
+    
+}
+
+
+/* @media (max-width: 800px){
+    #main{
+        max-width: 100%;
+    }
+    #img-div{
+        height: 50%;
+        width: 300px;
+    }
+} */
+#img-div{
+ position: relative;
+ max-width: 100%;
+}
+#img-caption{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+ img{
+    /* height: 100%;  */
+    max-width: 100%;
+    border-radius: 5px;  
+}     
+
+#about{
+    grid-area: about;
+    background-color: olive;
+     text-align: center;
+}
+#about p{
+   padding: 20px 0;
+}
+#tribute-info{
+    text-align: center;
+    margin: 0 5px;
+}
+#discography{
+    grid-area: discography;
+    background-color: orangered;
+    text-align: center;
+    padding: 20px 0;
+}
+#discography p{
+    padding-right: 5px;
+}
+#album-list li{
+    line-height: 20px; 
+}
+ol li{
+    list-style-type: none;
+}
+ul li{
+    list-style-type: none;
+}
+
+#tours{
+    grid-area: tours;
+    background-color: darkcyan;
+}
+#awards{
+    grid-area: awards;
+    background-color: hotpink;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#tours{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ #tours img{
+    height: 200px;
+    width: 200px; 
+    max-width: 100%;
+} 
+#tribute-link{
+text-decoration: none;
+}
+
+@media only screen and (max-width: 766px){
+      #main{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.2fr 0.4fr 0.3fr 0.3fr 0.3fr 1.7fr;
+          grid-template-areas: 
+          "nav"
+          "main"
+          "about"
+          "discography"
+          "awards"
+          "tours";
+      }
+    
+    #img-caption{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+}
